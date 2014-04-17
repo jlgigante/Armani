@@ -19,8 +19,6 @@ if (DEBUG == FALSE) {
 */
 $smarty->compile_check = TRUE;
 $smarty->cache_lifetime = CACHE_LIFETIME_DEFAULT;
-
 function smarty_modifier_stripslashes($string){
  return $stripslashes($string);
 }
-
