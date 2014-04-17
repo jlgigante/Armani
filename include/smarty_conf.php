@@ -1,9 +1,5 @@
 <?php
-
-
 require('./libs/Smarty.class.php');
-
-
 define('CACHE_LIFETIME_DEFAULT', 3600);
 $smarty = new Smarty;
 $smarty->template_dir = 'templates/';
