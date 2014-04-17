@@ -1,2 +1,3 @@
 Sources/
-templates_c/
+templates_c/*
+cache/*
