@@ -14,8 +14,8 @@
 		<div class="row navigation">
 	      	<div class="col-md-4 col-sm-4 col-xs-8">
 	      		<h1 class="text-center">Découvrez<br/>son histoire</h1>
-	      		<p>A la terrasse d'un café, Miss A. lit son journal. Un homme passe devant elle, la subjugue... Miss A. le traque jusqu'à son hôtel. Son obsession pour lui envahit ses pensées</p>
-	      		<p>Pour fêter la sortie d'Armani Code, Obsession a conçu trois films qui racontent la fascination d'une femme pour un artiste de la séduction.</p>
+	      		<p>A la terrasse d'un café, Miss A. lit son journal. Un homme passe devant elle, la subjugue... Miss A. le traque jusqu'à son hôtel. Son obsession pour lui envahit ses pensées...<br/>
+	      		Pour fêter la sortie d'Armani Code, Obsession a conçu trois films qui racontent la fascination d'une femme pour un artiste de la séduction.</p>
 	      			
 	      	</div>
 	      	<div class="col-md-4 col-sm-4 col-xs-8 bloc-vignette">
