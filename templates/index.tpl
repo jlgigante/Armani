@@ -1,12 +1,8 @@
 {extends file="structure.tpl"}
-
 {block name="navigation"}
 	{include file="_menu.tpl"}	
 {/block}
-
-
 {block name="content"}
-
 	<section id="histoires"><!-- debut les histoires -->
 		<div class="row">
 			<iframe src="//player.vimeo.com/video/92120978?color=ffffff" width="500" height="188" class="iframe-player" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>	
@@ -15,8 +11,7 @@
 	      	<div class="col-md-4 col-sm-4 col-xs-8">
 	      		<h1 class="text-center">Découvrez<br/>son histoire</h1>
 	      		<p>A la terrasse d'un café, Miss A. lit son journal. Un homme passe devant elle, la subjugue... Miss A. le traque jusqu'à son hôtel. Son obsession pour lui envahit ses pensées...<br/>
-	      		Pour fêter la sortie d'Armani Code, Obsession a conçu trois films qui racontent la fascination d'une femme pour un artiste de la séduction.</p>
-	      			
+	      		Pour fêter la sortie d'Armani Code, Obsession a conçu trois films qui racontent la fascination d'une femme pour un artiste de la séduction.</p>	      			
 	      	</div>
 	      	<div class="col-md-4 col-sm-4 col-xs-8 bloc-vignette">
 	      		<img src="{$smarty.const.BASE_URL|escape}/images/histoire_vignette_01_on.jpg" alt="Miss A. alone in Paris" class="vignette"/>	      		      		
@@ -40,10 +35,7 @@
 	      		</div>
 	      	</div>
 	   </div>
-	   
-
-	</section><!-- fin les histoires -->
-	
+	</section><!-- fin les histoires -->	
 	
 	<section id="les-codes"><!-- debut les codes -->	
 		<div class="row">
@@ -89,7 +81,6 @@
 				<h1 class="full-title">Le vestiaire</h1>
 			</div>
 		</div>
-
 		<div class="row vignettes">	
 			<div class="col-md-8 col-xs-8 vignette" data-link="{$smarty.const.BASE_URL|escape}/le-vestiaire#1">						
 	      		<div class="details">
