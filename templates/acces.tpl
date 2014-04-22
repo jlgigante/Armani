@@ -1,8 +1,5 @@
 {extends file="structure.tpl"}
-
-
 {block name="content"}
-
 	<section id="acces">
 		{*
 		<div class="row">
@@ -10,15 +7,12 @@
 				<h1 class="full-title">Code</h1>				
 			</div>			
 		</div>
-		*}
-		
-		<div class="row bg-acces">
-			
-			<div class="col-md-offset-10 col-md-6" style="margin-top: 200px; ">
+		*}		
+		<div class="row bg-acces">			
+			<div class="col-md-offset-10 col-md-6" style="margin-top: 200px;">
 				<p class="text-center">
 					Découvrez en avant-première<br/>l'histoire d’une Obsession<br/>en entrant le code
-				</p>
-				
+				</p>				
 				<form role="form" action="{$smarty.const.BASE_URL|escape}/identification" method="post" id="code_form" name="code_form">
 					<div class="form-group">
 						<input type="password" class="form-control input-sm center-block" id="code" name="code" placeholder="Entrez le code">
@@ -56,13 +50,9 @@
   //
     $('#code_form').on('submit', function() { 	    
 	    var code = $('#code').val();
-	    console.log(code);
-	    
+/* 	    console.log(code); */
 	    $("#resultat").hide();
-	    $("#resultat p").removeClass();
-   	    
-	    
-        
+	    $("#resultat p").removeClass();    
         if(code == '' ) {
         	$("#resultat").fadeIn();
         	$("#resultat p").addClass("bg-warning").html("HAHAHAHAHAH");           

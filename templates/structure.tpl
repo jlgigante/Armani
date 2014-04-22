@@ -44,11 +44,11 @@
 <div class="container header"><!-- debut header -->
 	<div class="page-header">	
 		<div class="row">
-			<div class="col-md-4 col-xs-16 col-md-offset-6 text-center"><a href="{$smarty.const.BASE_URL|escape}"><img src="{$smarty.const.BASE_URL|escape}/images/hd_logo_obsession.png" alt="Obesssion" width="225" height="75"/></a></div>			
+			<div class="col-md-4 col-xs-16 col-md-offset-6 text-center"><a href="http://obsession.nouvelobs.com" target="_blank"><img src="{$smarty.const.BASE_URL|escape}/images/hd_logo_obsession.png" alt="Obesssion" width="225" height="75"/></a></div>			
 		</div>		
 		<div class="row">
 			<div class="col-md-8 col-xs-16 col-md-offset-4 text-center">
-				<div class="title center-block">Histoire d'une Obsession<br/><img src="{$smarty.const.BASE_URL|escape}/images/hd_logo_giorgio-armani.png" width="121" height="44" alt="Giorgio Armani" /></div>				
+				<div class="title center-block"><a href="{$smarty.const.BASE_URL|escape}">Histoire d'une Obsession<br/><img src="{$smarty.const.BASE_URL|escape}/images/hd_logo_giorgio-armani.png" width="121" height="44" alt="Armani Code" /></a></div>				
 			</div>
 		</div>	
 	</div>

@@ -5,13 +5,13 @@
 {block name="content"}
 	<section id="histoires"><!-- debut les histoires -->
 		<div class="row">
-			<iframe src="//player.vimeo.com/video/92120978?color=ffffff" width="500" height="188" class="iframe-player" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>	
+			<iframe src="//player.vimeo.com/video/92120978?color=ffffff&autoplay=1" width="500" height="188" class="iframe-player" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>	
 		</div>
 		<div class="row navigation">
 	      	<div class="col-md-4 col-sm-4 col-xs-8">
 	      		<h1 class="text-center">Découvrez<br/>son histoire</h1>
-	      		<p>A la terrasse d'un café, Miss A. lit son journal. Un homme passe devant elle, la subjugue... Miss A. le traque jusqu'à son hôtel. Son obsession pour lui envahit ses pensées...<br/>
-	      		Pour fêter la sortie d'Armani Code, Obsession a conçu trois films qui racontent la fascination d'une femme pour un artiste de la séduction.</p>	      			
+	      		<p>A la terrasse d'un café, Miss A. lit son journal. Un homme passe devant elle, son parfum la subjugue… Une fois le garçon trop vite parti, Miss A. le suit….Son obsession pour ce garçon ne la quitte plus. Jusqu’où sera-t-elle prête à le suivre ?<br/>
+Pour célébrer le nouveau parfum Armani Code, Obsession a conçu 3 films qui racontent l'obsession d'une femme captivée par un homme qui maitrise tous les codes de séduction sans en avoir l'air. Suivez-la pour tenter de comprendre ce qu'il laisse dans son sillage. </p>	      			
 	      	</div>
 	      	<div class="col-md-4 col-sm-4 col-xs-8 bloc-vignette">
 	      		<img src="{$smarty.const.BASE_URL|escape}/images/histoire_vignette_01_on.jpg" alt="Miss A. alone in Paris" class="vignette"/>	      		      		
@@ -117,14 +117,12 @@
 			
 		</div>	
 	</section><!-- fin Le vestiaire -->
-
 {/block}
 
 {block name="custom_js"}
 <script>
 {literal}
 $(function() {
-
 	//
 	$('.vignette').click(function(){
 /* 		alert($(this).data('link')); */
