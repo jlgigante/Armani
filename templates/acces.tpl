@@ -16,28 +16,23 @@
 				<form role="form" action="{$smarty.const.BASE_URL|escape}/identification" method="post" id="code_form" name="code_form">
 					<div class="form-group">
 						<input type="password" class="form-control input-sm center-block" id="code" name="code" placeholder="Entrez le code">
-					</div>					
-					<button type="submit" class="btn btn-default btn-xs center-block">Submit</button>
-				</form>
-				
-				<div id="resultat" style="display:hidden;">
-					<p></p>
-					{*
-					<p class="bg-primary">...</p>
-					<p class="bg-success">...</p>
-					<p class="bg-info">...</p>
-					<p class="bg-warning">...</p>
-					<p class="bg-danger">...</p>
-					*}
-				</div>
-				
-				
+						<input type="hidden" name="redirect" value="{$redirect|escape}">
+					</div>
+					<div id="resultat">
+						<p></p>
+						{*
+						<p class="bg-primary">...</p>
+						<p class="bg-success">...</p>
+						<p class="bg-info">...</p>
+						<p class="bg-warning">...</p>
+						<p class="bg-danger">...</p>
+						*}
+					</div>			
+					<button type="submit" class="btn btn-default btn-xs center-block" id="bt-submit">Entrer</button>
+				</form>				
 			</div>
-		</div>
-				
+		</div>				
 	</section>
-	
-
 {/block}
 
 
@@ -55,7 +50,8 @@
 	    $("#resultat p").removeClass();    
         if(code == '' ) {
         	$("#resultat").fadeIn();
-        	$("#resultat p").addClass("bg-warning").html("HAHAHAHAHAH");           
+        	$("div.form-group").addClass("has-error");
+        	$("#resultat p").addClass("bg-warning").html("Saisissez le code");           
         } 
         
         else {
@@ -69,17 +65,17 @@
                 success: function(json) {
                     if(json.codeRetour == 0) {
                     	$('button[type="submit"]').attr("disabled", true);
-						$("#resultat").fadeIn();
-                        $("#resultat p").addClass("bg-success").html(json.message);
-                        //
-                        
-                        $(location).attr('href', urlHome);
-
+/* 						$("#resultat").fadeIn(); */
+/*                         $("#resultat p").addClass("bg-success").html(json.message); */
+                        //                        
+                        $(location).attr('href', json.redirect);
                     } else {
 /*                         alert('Erreur : '+ json.codeRetour); */
 						$('button[type="submit"]').attr("disabled", false);
 						$("#resultat").fadeIn();
-                        $("#resultat p").addClass("bg-danger").html(json.message);
+                        $("div.form-group").addClass("has-error");
+                        $("#resultat p").addClass("bg-warning").html(json.message);
+                        
                     }
                 }
             });        

@@ -2,8 +2,8 @@
 require_once('include/config.php');
 include("include/Utils.class.php");
 //
-if( !isset($_SESSION['code']) || $_SESSION['code'] != true) {
-	$urlIdentification = BASE_URL . '/identification'; 
+if( !isset($_COOKIE['armani-code']) || $_COOKIE['armani-code'] != 'armaniCODE') {
+	$urlIdentification = BASE_URL . '/identification?url=' . CURRENT_URL; 
 	header("location:" . $urlIdentification);
 	exit;
 }

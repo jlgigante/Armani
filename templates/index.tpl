@@ -10,8 +10,10 @@
 		<div class="row navigation">
 	      	<div class="col-md-4 col-sm-4 col-xs-8">
 	      		<h1 class="text-center">Découvrez<br/>son histoire</h1>
-	      		<p>A la terrasse d'un café, Miss A. lit son journal. Un homme passe devant elle, son parfum la subjugue… Une fois le garçon trop vite parti, Miss A. le suit….Son obsession pour ce garçon ne la quitte plus. Jusqu’où sera-t-elle prête à le suivre ?<br/>
-Pour célébrer le nouveau parfum Armani Code, Obsession a conçu 3 films qui racontent l'obsession d'une femme captivée par un homme qui maitrise tous les codes de séduction sans en avoir l'air. Suivez-la pour tenter de comprendre ce qu'il laisse dans son sillage. </p>	      			
+	      		<p>
+	      			{*A la terrasse d'un café, Miss A. lit son journal. Un homme passe devant elle, son parfum la subjugue… Une fois le garçon trop vite parti, Miss A. le suit….Son obsession pour ce garçon ne la quitte plus. Jusqu’où sera-t-elle prête à le suivre ?<br/>
+Pour célébrer le nouveau parfum Armani Code, Obsession a conçu 3 films qui racontent l'obsession d'une femme captivée par un homme qui maitrise tous les codes de séduction sans en avoir l'air. Suivez-la pour tenter de comprendre ce qu'il laisse dans son sillage. *}
+Pour célébrer le nouveau parfum Armani Code, Obsession a conçu trois films racontant l’histoire d’une obsession. A la terrasse d'un café, Miss A. lit son journal. Elle ne sait pas encore que sa vie va être bouleversée. Un homme passe devant elle, son parfum la subjugue... Une fois le garçon parti, Miss A. le suit….Jusqu’où ira son obsession ?</p>	      			
 	      	</div>
 	      	<div class="col-md-4 col-sm-4 col-xs-8 bloc-vignette">
 	      		<img src="{$smarty.const.BASE_URL|escape}/images/histoire_vignette_01_on.jpg" alt="Miss A. alone in Paris" class="vignette"/>	      		      		
@@ -83,7 +85,7 @@ Pour célébrer le nouveau parfum Armani Code, Obsession a conçu 3 films qui ra
 		</div>
 		<div class="row vignettes">			
 			{foreach from=$vestiaire_content.articles key=myId item=i name=vestiaire_content}						
-				<div class="col-md-{$i.cols} col-xs-{$i.cols} vignette" data-link="{$smarty.const.BASE_URL|escape}/le-vestiaire#{$smarty.foreach.code_content.iteration}">						
+				<div class="col-md-{$i.cols} col-xs-{$i.cols} vignette" data-link="{$smarty.const.BASE_URL|escape}/le-vestiaire#{$i.id}">						
 	      			<div class="details">	      		
 	      				<h2>{$i.title}</h2>
 	      				<p>{$i.article}</p>	

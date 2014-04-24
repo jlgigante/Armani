@@ -3,19 +3,20 @@
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!--> <html xmlns:fb="http://ogp.me/ns/fb#"><!--<![endif]-->
+<html lang="fr">
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <title>{$smarty.const.SITE_NAME}</title>
-        <meta name="description" content="Le nouvelObs - Supplément Partenaire - {$smarty.const.SITE_NAME}">
+        <meta name="description" content="{$smarty.const.SITE_DESCRIPTION}">
 <!--         <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
         {**}
         <meta property="og:title" content="{if isset($article)}{$article.content.titre|strip_tags}{else}{$smarty.const.SITE_NAME}{/if}"/>
-		<meta property="og:type" content="{if isset($article)}article{else}website{/if}"/>
+		<meta property="og:type" content="{if isset($content)}article{else}website{/if}"/>
 		<meta property="og:url" content="{$smarty.const.CURRENT_URL}"/>
-		<meta property="og:image" content="{$smarty.const.BASE_URL}/images/hd_logo_giorgio-armani.png"/>
+		<meta property="og:image" content="{if isset($content)}{$smarty.const.BASE_URL}/images/{$content.articles.0.visuel}{else}{$smarty.const.BASE_URL}/images/hd_logo_giorgio-armani.png{/if}"/>
 		<meta property="og:site_name" content="{$smarty.const.SITE_NAME}"/>
-		<meta property="og:description" content=""/>
+		<meta property="og:description" content="{if isset($content)}{$content.articles.0.article}{else}{$smarty.const.SITE_DESCRIPTION}{/if}"/>
 	    <!-- Bootstrap -->
 	    <link href="{$smarty.const.BASE_URL|escape}/css/bootstrap.css" rel="stylesheet" media="screen">
 	    <link href="{$smarty.const.BASE_URL|escape}/css/style.css" rel="stylesheet" media="screen">
@@ -67,7 +68,7 @@ document.write('<img src="http://ad.doubleclick.net/activity;src=4232944;type=AR
 		</div>		
 		<div class="row">
 			<div class="col-md-8 col-xs-16 col-md-offset-4 text-center">
-				<div class="title center-block"><a href="{$smarty.const.BASE_URL|escape}">Histoire d'une Obsession<br/><img src="{$smarty.const.BASE_URL|escape}/images/hd_logo_giorgio-armani.png" width="121" height="44" alt="Armani Code" /></a></div>				
+				<div class="title center-block"><a href="{$smarty.const.BASE_URL|escape}">Histoire d'une Obsession<br/><img src="{$smarty.const.BASE_URL|escape}/images/hd_logo_giorgio-armani.png" width="145" height="53" alt="Armani Code" /></a></div>				
 			</div>
 		</div>	
 	</div>

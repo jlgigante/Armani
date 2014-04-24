@@ -3,8 +3,10 @@
  * Fichier de config
  */
 
-define("SITE_NAME", "Armani Code");
 
+
+define("SITE_NAME", "Armani Code - Histoire d'une obsession");
+define("SITE_DESCRIPTION", "Armani Code");
 /* error_reporting('E_ALL'); */
 //
 include("include/smarty_conf.php");
@@ -37,6 +39,9 @@ else {
 	}
 	
 	$baseUrl = "http://".$_SERVER["SERVER_NAME"].$serverProt;
+	
+	
+	
 	$currentUrl = $baseUrl.$_SERVER["REQUEST_URI"];
 
 }
@@ -73,9 +78,6 @@ $smarty->assign('menu', $menu);
  */
 
 //include_once('content.php');
-
-
-
 
 
 

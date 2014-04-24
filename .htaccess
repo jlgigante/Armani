@@ -358,7 +358,7 @@ FileETag None
  
  RewriteRule ^([a-z\-]+)$ /articles.php?rubrique=$1 [QSA]
 
- RewriteRule ^([a-z\-]+)$ /article.php?rubrique=$1&id=$2 [QSA]
+ RewriteRule ^([a-z\-]+)/([0-9]{1,4})$ /article.php?rubrique=$1&id=$2 [QSA]
  
 
 

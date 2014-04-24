@@ -4,11 +4,14 @@ include("include/Utils.class.php");
 
 
 
-if( isset($_SESSION['code']) && $_SESSION['code'] == true) {
-
+/* if( isset($_SESSION['code']) && $_SESSION['code'] == true) { */
+/*
+if( isset($_COOKIE['armani-code']) && $_COOKIE['armani-code'] == 'armaniCODE') {
 	header("location:" . BASE_URL);
 	exit;
 }
+*/
+
 
 //FIXME : Check via le menu
 /*
@@ -28,29 +31,27 @@ switch ($article) {
 }
 */
 
-
 if(isset($_POST) and !empty($_POST)) {		
 
 		$code_form = $_POST;
-		$code = "CODE";
-		
+		$code = "CODE";		
 		
 		//Control formulaire
 /* 		sleep(2); */
 		//
 		if( $code_form['code'] === $code ){
-			$_SESSION['code'] = true;
-			echo json_encode(array('codeRetour'=>0, 'message'=>'Code ok'));
-			exit;
+			$_SESSION['code'] = true;			
+			setcookie('armani-code', 'armaniCODE', time() + 3600);//1heure			
+			echo json_encode(array('codeRetour'=>0, 'message'=>'code OK', 'redirect' => $code_form['redirect'] ));
+			exit;			
 		}
 		else {
-			echo json_encode(array('codeRetour'=>1, 'message'=>'Code KO'));
+			echo json_encode(array('codeRetour'=>1, 'message'=>'Code incorrect'));
 			exit;
 		}
 		
 		
 	}
 
-
-
+$smarty->assign('redirect', $_GET['url']);
 $smarty->display('acces.tpl');
