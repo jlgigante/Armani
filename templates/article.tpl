@@ -21,9 +21,9 @@
 					<div class="col-md-16">
 						<p class="text-right"></p>							
 						<!-- AddThis Button BEGIN -->
-						<div class="addthis_toolbox addthis_default_style addthis_32x32_style  pull-right" 							
+						<div class="addthis_toolbox addthis_default_style addthis_16x16_style  pull-right" 							
 						addthis:url="{$smarty.const.BASE_URL|escape}/{$rubrique}#{$smarty.foreach.content.iteration}"
-				        addthis:title="{$smarty.const.SITE_NAME} - {$content.titre}"
+				        addthis:title="{$smarty.const.SITE_NAME} - {$content.titre} - {$i.article}"
 				        addthis:description="{$i.article}"></a>
 				        <a class="addthis_button_facebook" style="padding:0px; padding-left:2px;"></a>
 						<a class="addthis_button_twitter" style="padding:0px; padding-left:2px;"></a>

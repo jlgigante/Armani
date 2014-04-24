@@ -39,12 +39,31 @@
   ga('send', 'pageview');
 {/literal}
 </script>	
+<!--
+Début du tag DoubleClick Floodlight : Veillez à ne pas supprimer
+Nom d'activité de ce tag : armani-code_espace-dedie-obsession
+URL de la page Web où doit être placé le tag : http://armani-code.obsession.nouvelobs.com/identification
+Ce tag doit être placé entre les tags <body> et </body>, le plus près possible du tag d'ouverture.
+Date de création : 04/23/2014
+-->
+<script type="text/javascript">
+var axel = Math.random() + "";
+var a = axel * 10000000000000;
+document.write('<img src="http://ad.doubleclick.net/activity;src=4232944;type=ARMAR0;cat=arman0;ord=' + a + '?" width="1" height="1" alt=""/>');
+</script>
+<noscript>
+<img src="http://ad.doubleclick.net/activity;src=4232944;type=ARMAR0;cat=arman0;ord=1?" width="1" height="1" alt=""/>
+</noscript>
+<!-- Fin du tag DoubleClick Floodlight : Veuillez ne pas supprimer -->
+
+
 
 
 <div class="container header"><!-- debut header -->
 	<div class="page-header">	
 		<div class="row">
-			<div class="col-md-4 col-xs-16 col-md-offset-6 text-center"><a href="http://obsession.nouvelobs.com" target="_blank"><img src="{$smarty.const.BASE_URL|escape}/images/hd_logo_obsession.png" alt="Obesssion" width="225" height="75"/></a></div>			
+<!-- 			<div class="col-md-4 col-xs-16 col-md-offset-6 text-center"><a href="http://obsession.nouvelobs.com" target="_blank"><img src="{$smarty.const.BASE_URL|escape}/images/hd_logo_obsession.png" alt="Obesssion" width="225" height="75"/></a></div> -->
+			<div class="col-md-16 col-xs-16 text-center"><a href="http://obsession.nouvelobs.com" target="_blank"><img src="{$smarty.const.BASE_URL|escape}/images/hd_logo_obsession.png" alt="Obesssion" width="225" height="75"/></a></div>			
 		</div>		
 		<div class="row">
 			<div class="col-md-8 col-xs-16 col-md-offset-4 text-center">

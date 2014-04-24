@@ -16,5 +16,6 @@ if(!array_key_exists($rubrique, $menu)){
 //
 include("content.php");
 $smarty->assign('code_content', $code_content);
+$smarty->assign('vestiaire_content', $vestiaire_content);
 $smarty->assign('rubrique', $rubrique);
 $smarty->display('index.tpl');

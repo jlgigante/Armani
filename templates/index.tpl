@@ -40,13 +40,13 @@ Pour célébrer le nouveau parfum Armani Code, Obsession a conçu 3 films qui ra
 	<section id="les-codes"><!-- debut les codes -->	
 		<div class="row">
 			<div class="col-md-16 text-center bg-h1">
-				<h1 class="full-title">Les Codes</h1>
+				<h1 class="full-title">{$code_content.titre}</h1>
 			</div>
 		</div>
 		<div class="row">
 			<div class="col-md-16">
 				<!-- -->
-				<div id="myCarousel" class="carousel slide" data-ride="carousel">
+				<div id="myCarousel" class="carousel slide c-fade" data-ride="carousel">
 					<!-- Indicators -->
 					<ol class="carousel-indicators">
 						{foreach from=$code_content.articles key=myId item=i name=code_content}	
@@ -78,43 +78,18 @@ Pour célébrer le nouveau parfum Armani Code, Obsession a conçu 3 films qui ra
 	<section id="le-vestiaire"><!-- debut Le vestiaire -->
 		<div class="row">	
 			<div class="col-md-16 text-center bg-h1">
-				<h1 class="full-title">Le vestiaire</h1>
+				<h1 class="full-title">{$vestiaire_content.titre}</h1>
 			</div>
 		</div>
-		<div class="row vignettes">	
-			<div class="col-md-8 col-xs-8 vignette" data-link="{$smarty.const.BASE_URL|escape}/le-vestiaire#1">						
-	      		<div class="details">
-	      		
-	      			<h2>vignette 1 Lorem ipsum</h2>
-	      			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor.</p>	
-	      		</div>
-	      	</div>
-	      	<div class="col-md-4 col-xs-4 vignette" data-link="{$smarty.const.BASE_URL|escape}/le-vestiaire#2">
-	      		<div class="details">
-	      			<h2>vignette 2 Lorem ipsum</h2>
-	      			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor.</p>	
-	      		</div>
-	      	</div>
-	      	<div class="col-md-4 col-xs-4 vignette"  data-link="{$smarty.const.BASE_URL|escape}/le-vestiaire#3">
-	      		<div class="details">
-	      			<h2>vignette 3 Lorem ipsum</h2>
-	      			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor.</p>	
-	      		</div>
-	      	</div>
-	      	
-	      	<div class="col-md-4 col-xs-4 vignette" data-link="{$smarty.const.BASE_URL|escape}/le-vestiaire#4">
-	      		<div class="details">
-	      			<h2>vignette 4 Lorem ipsum</h2>
-	      			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor.</p>
-	      		</div>
-	      	</div>
-	      	<div class="col-md-12 col-xs-12 vignette" data-link="{$smarty.const.BASE_URL|escape}/le-vestiaire#5">
-	      		<div class="details">
-	      			<h2>vignette 5 Lorem ipsum</h2>
-	      			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor.</p>	
-	      		</div>
-	      	</div>		
-			
+		<div class="row vignettes">			
+			{foreach from=$vestiaire_content.articles key=myId item=i name=vestiaire_content}						
+				<div class="col-md-{$i.cols} col-xs-{$i.cols} vignette" data-link="{$smarty.const.BASE_URL|escape}/le-vestiaire#{$smarty.foreach.code_content.iteration}">						
+	      			<div class="details">	      		
+	      				<h2>{$i.title}</h2>
+	      				<p>{$i.article}</p>	
+	      			</div>
+	      		</div>												
+			{/foreach}			
 		</div>	
 	</section><!-- fin Le vestiaire -->
 {/block}
@@ -133,7 +108,7 @@ $(function() {
 
 	//Carousel
    	    $('#myCarousel').carousel({
-	   	    interval:500000,
+	   	    interval:5000,
 	   	    pause: "true", 
 	   	    cycle: 'false'	   	    
 	   	});	   	   	

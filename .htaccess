@@ -356,7 +356,9 @@ FileETag None
  RewriteRule accueil /index.php [QSA,L]
  RewriteRule identification	/acces.php [QSA,L]
  
- RewriteRule ^([a-z\-]+)$ /article.php?rubrique=$1 [QSA]
+ RewriteRule ^([a-z\-]+)$ /articles.php?rubrique=$1 [QSA]
+
+ RewriteRule ^([a-z\-]+)$ /article.php?rubrique=$1&id=$2 [QSA]
  
 
 
