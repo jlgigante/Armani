@@ -1,43 +1,41 @@
 <?php
 
-
-
-
+ 
 $code_content = array(
 	'titre' => 'Les Codes',
 	'articles' => array (
 					array(
 						'id'		=>	1,
 						'title'		=>	'1',
-						'article'	=>	'il est indifférent en toutes circonstances, mais ça vous est égal, vous aimez le sentir à côté de vous.',
+						'article'	=>	"J'aime le sentir près de moi",
 						'visuel'	=>	'codes-580-1.gif',
 						'bigVisuel'	=>	'codes-full-1.gif',
 					),
 					array(
 						'id'		=>	2,
 						'title'		=> '2',
-						'article'	=> 'Il vous regarde droit dans les yeux ',
+						'article'	=> "Son regard me captive",
 						'visuel'	=>	'codes-580-2.gif',
 						'bigVisuel'	=>	'codes-full-2.gif',
 					),
 					array(
 						'id'		=>	3,
 						'title'		=> '3',
-						'article'	=> 'il ne parle pas, il murmure tout près de votre oreille. Son parfum se met à vous hanter.',
+						'article'	=> "Il murmure à mon oreille",
 						'visuel'	=>	'codes-580-3.gif',
 						'bigVisuel'	=>	'codes-full-3.gif',
 					),
 					array(
 						'id'		=>	4,
 						'title'		=>	'4',
-						'article'	=> 'il vous laisse souvent seule - ce qui vous hypnotise à distance. Même absent, son parfum est là.',
+						'article'	=> 	"Même absent il m'obsède",
 						'visuel'	=>	'codes-580-4.gif',
 						'bigVisuel'	=>	'codes-full-4.gif',
 					),
 					array(
 						'id'		=>	5,
-						'title'		=> '5',
-						'article'	=> 'il arrive toujours à un moment inattendu - son parfum le précède et, même si vous faites semblant, vous ne pouvez plus vous passer de lui. ',
+						'title'		=>	'5',
+						'article'	=> 	"Son parfum le précède",
 						'visuel'	=>	'codes-580-5.gif',
 						'bigVisuel'	=>	'codes-full-5.gif',
 					),

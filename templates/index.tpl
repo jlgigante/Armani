@@ -61,7 +61,7 @@ Pour célébrer le nouveau parfum Armani Code, Obsession a conçu trois films ra
 								<a href="{$smarty.const.BASE_URL|escape}/les-codes#{$smarty.foreach.code_content.iteration}" title=""><img {*data-src="holder.js/900x500/auto/#777:#7a7a7a/text:First slide"*} alt="First slide" src="{$smarty.const.BASE_URL|escape}/images/{$i.visuel}"></a>
 								<div class="carousel-caption">								
 									<h2 class="hide">{$i.title}</h2>
-									<p>{$i.article}.</p>
+									<p class="text-center">{$i.article}.</p>
 									{*<p><a class="btn btn-lg btn-primary" href="#" role="button">Sign up today</a></p>*}
 								</div>							
 							</div>							
@@ -96,47 +96,4 @@ Pour célébrer le nouveau parfum Armani Code, Obsession a conçu trois films ra
 	</section><!-- fin Le vestiaire -->
 {/block}
 
-{block name="custom_js"}
-<script>
-{literal}
-$(function() {
-	//
-	$('.vignette').click(function(){
-/* 		alert($(this).data('link')); */
-		var link = $(this).data('link');
-		window.location = link;
-	});
-
-
-	//Carousel
-   	    $('#myCarousel').carousel({
-	   	    interval:5000,
-	   	    pause: "true", 
-	   	    cycle: 'false'	   	    
-	   	});	   	   	
-	//Les histoires	   	   	
-	   	var videoUrl = '//player.vimeo.com/video/'; 
-	   	var videoId = '';
-	   	var playerCustom = '?color=c3c3c3&autoplay=1';
-	   	
-	   	$('.action').click(function() {
-	   		//
-			if( $(this).hasClass("action-on") ) {
-				return false;
-			}
-			//
-			$(".action").removeClass("action-on");	   			
-			$(".bt-play").fadeIn(500).css('display', 'block'); 
-			$(".playing").fadeOut(300); 
-	   		video = videoUrl + $(this).data('id') + playerCustom;
-	   		//		   		
-	   		$(".iframe-player").attr("src", video);
-	   		$(".bt-play", this).fadeOut(300);
-	   		$(".playing", this).fadeIn(500);
-	   		$(this).addClass("action-on");	   		
-	   	});	   	   	
-});
-{/literal}
-</script>
-{/block}
 

@@ -9,7 +9,7 @@
 		</div>
 		*}		
 		<div class="row bg-acces">			
-			<div class="col-md-offset-10 col-md-6" style="margin-top: 200px;">
+			<div class="col-md-offset-10 col-md-6 col-xs-offset-10 col-xs-6" style="margin-top: 200px;">
 				<p class="text-center">
 					Découvrez en avant-première<br/>l'histoire d’une Obsession<br/>en entrant le code
 				</p>				
@@ -36,57 +36,4 @@
 {/block}
 
 
-{block name="custom_js"}
-	<script>
-	var urlHome = "{$smarty.const.BASE_URL}";
-	{literal}
-  $(function() {
-  $(".main").css("padding-top","0px");
-  //
-    $('#code_form').on('submit', function() { 	    
-	    var code = $('#code').val();
-/* 	    console.log(code); */
-	    $("#resultat").hide();
-	    $("#resultat p").removeClass();    
-        if(code == '' ) {
-        	$("#resultat").fadeIn();
-        	$("div.form-group").addClass("has-error");
-        	$("#resultat p").addClass("bg-warning").html("Saisissez le code");           
-        } 
-        
-        else {
-        	$('button[type="submit"]').attr("disabled", true);
-        	
-            $.ajax({
-                url: $(this).attr('action'),
-                type: $(this).attr('method'),
-                data: $(this).serialize(),
-                dataType: 'json',
-                success: function(json) {
-                    if(json.codeRetour == 0) {
-                    	$('button[type="submit"]').attr("disabled", true);
-/* 						$("#resultat").fadeIn(); */
-/*                         $("#resultat p").addClass("bg-success").html(json.message); */
-                        //                        
-                        $(location).attr('href', json.redirect);
-                    } else {
-/*                         alert('Erreur : '+ json.codeRetour); */
-						$('button[type="submit"]').attr("disabled", false);
-						$("#resultat").fadeIn();
-                        $("div.form-group").addClass("has-error");
-                        $("#resultat p").addClass("bg-warning").html(json.message);
-                        
-                    }
-                }
-            });        
-            
-        }
-        
-        return false;
-    });
 
-  
-    });
-	{/literal}
-</script>
-{/block}

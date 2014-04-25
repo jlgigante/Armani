@@ -2,10 +2,23 @@
 require_once('include/config.php');
 include("include/Utils.class.php");
 //
-if( !isset($_COOKIE['armani-code']) || $_COOKIE['armani-code'] != 'armaniCODE') {
-	$urlIdentification = BASE_URL . '/identification?url=' . urlencode(CURRENT_URL); 
-	header("location:" . $urlIdentification);
-	exit;
+try {
+    $date = new DateTime('NOW');
+    $today = $date->format('Y-m-d');
+    //
+    $date->setDate(2014, 05, 01);    
+    $open = $date->format('Y-m-d');
+    //
+    if ( $today <= $open ){
+	    if( !isset($_COOKIE['armani-code']) || $_COOKIE['armani-code'] != 'armaniCODE') {
+			$urlIdentification = BASE_URL . '/identification?url=' . CURRENT_URL; 
+			header("location:" . $urlIdentification);
+			exit;
+		}
+	}
+} catch (Exception $e) {
+/*     echo $e->getMessage(); */
+    Utils::get404($smarty);
 }
 //
 $rubrique = $_GET['rubrique'];
@@ -45,6 +58,7 @@ foreach($content['articles'] as $k=>$v){
 if($idExist != true){	
 	Utils::get404($smarty);
 }
+
 //
 $smarty->assign('content', $content);
 $smarty->assign('rubrique', $rubrique);

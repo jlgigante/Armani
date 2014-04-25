@@ -14,7 +14,7 @@
         <meta property="og:title" content="{if isset($article)}{$article.content.titre|strip_tags}{else}{$smarty.const.SITE_NAME}{/if}"/>
 		<meta property="og:type" content="{if isset($content)}article{else}website{/if}"/>
 		<meta property="og:url" content="{$smarty.const.CURRENT_URL}"/>
-		<meta property="og:image" content="{if isset($content)}{$smarty.const.BASE_URL}/images/{$content.articles.0.visuel}{else}{$smarty.const.BASE_URL}/images/hd_logo_giorgio-armani.png{/if}"/>
+		<meta property="og:image" content="{if isset($content)}{$smarty.const.BASE_URL}/images/{$content.articles.0.visuel}{else}{$smarty.const.BASE_URL}/images/bg-code.jpg{/if}"/>
 		<meta property="og:site_name" content="{$smarty.const.SITE_NAME}"/>
 		<meta property="og:description" content="{if isset($content)}{$content.articles.0.article}{else}{$smarty.const.SITE_DESCRIPTION}{/if}"/>
 	    <!-- Bootstrap -->
@@ -91,13 +91,19 @@ document.write('<img src="http://ad.doubleclick.net/activity;src=4232944;type=AR
 </div><!-- fin container main -->
 
 
+
 <!-- /container -->
 <script src="http://code.jquery.com/jquery.js"></script>
-<script src="{$smarty.const.BASE_URL}/js/jquery.lazyload.min.js" type="text/javascript"></script>
-<script type="text/javascript" src="{$smarty.const.BASE_URL|escape}/js/jquery-scrollto.js"></script>
 <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
-<script src="{$smarty.const.BASE_URL}/js/bootstrap.min.js"></script>
-{block name="custom_js"}{/block}
+
+{if isset($customJS) && !empty($customJS)}
+{foreach from=$customJS key=myId item=i}	
+	<script type="text/javascript" src="{$smarty.const.BASE_URL|escape}/js/{$i}"></script>
+{/foreach}
+{/if}
+
+
+
 {include file="_traceurs.tpl"}        
 </body>
 </html>
