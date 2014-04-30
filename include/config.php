@@ -67,7 +67,7 @@ session_start();
 $menu = array(
 				'les-histoires'			=>	'les histoires', 
 				'les-codes'			=>	'les codes', 
-				'le-vestiaire'		=>	'le vestiaire',
+				'le-vestiaire'		=>	'Le vestiaire',
 			);
 
 $smarty->assign('menu', $menu);

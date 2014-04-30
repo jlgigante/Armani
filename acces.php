@@ -4,9 +4,9 @@ include("include/Utils.class.php");
 //
 if(isset($_POST) and !empty($_POST)) {		
 	$code_form = $_POST;
-	$code = "CODE";			
+	$code = "code";			
 	//Control formulaire
-	if( $code_form['code'] === $code ){
+	if( strtolower($code_form['code']) === $code ){
 		$_SESSION['code'] = true;			
 		setcookie('armani-code', 'armaniCODE', time() + 3600);//1heure			
 		echo json_encode(array('codeRetour'=>0, 'message'=>'code OK', 'redirect' => $code_form['redirect'] ));

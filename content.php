@@ -28,7 +28,7 @@ $code_content = array(
 					array(
 						'id'		=>	4,
 						'title'		=>	'4',
-						'article'	=> 	"Même absent il m'obsède",
+						'article'	=> 	"Même absent, il m'obsède",
 						'visuel'	=>	'codes-580-4.gif',
 						'bigVisuel'	=>	'codes-full-4.gif',
 					),
@@ -45,7 +45,7 @@ $code_content = array(
 
 
 $vestiaire_content = array(
-	'titre' => 'Le vestiaire',
+	'titre' => 'Le vestiaire Armani',
 	'articles' => array (
 					array(
 						'id'		=>	1,

@@ -120,6 +120,13 @@
 }
 
 
+.img-filter(@filter, @percent){
+	filter: @filter(@percent);
+    -webkit-filter: @filter(@percent);
+    -moz-filter: @filter(@percent);
+    -ms-filter: @filter(@percent);
+    -o-filter: @filter(@percent);
+}
 
 html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video
 {
@@ -632,15 +639,16 @@ section{
 		overflow: hidden;
 	
 		h1{
-			margin: 5px 0px 5px 0px !important;
+			margin: 2px 0px 2px 0px !important;
 			font-size: 0.875em;
 			line-height: 1em;
 		}
 		p{
-			padding-top: 5px;
+			padding-top: 2px;
 			border-top: 1px solid @white;
 			font-size: 0.750em;
 			line-height:1em; 
+			.font-family("HelveticaNeue-Medium");
 		}
 	
 		.bloc-vignette{
@@ -691,24 +699,86 @@ section{
 	.vignettes{
 		
 		
-		div:nth-child(n){
+		.vignette:nth-child(n){
 			padding: 0px;
 			height: 225px;
 			overflow: hidden;
 			cursor: pointer;
-			border: none !important;
+			border: 1px solid @white !important;
+			background: @white;
+/*
 			outline:1px solid @white;
-			outline-offset:0px;
-			
-			&:hover{
-				.opacity(1);
+			outline-offset:10px;
+*/
+
+			.details{				
+				z-index: 99;
+				outline: none;				
+				background: rgba(0,0,0,0.80) !important;
+				padding: 10px !important;
+				position: absolute;
+				width: 100%;
+				left: 0px;
+				bottom: -100px;
 				.transition(all, 0.5s, ease);
+				
+				h2, p{
+					color: @white;
+					font-size: 0.750em;
+					.font-family("HelveticaNeue-Thin");
+				}		
+			}
+
+			&:hover {
+
 				.details{
-					bottom: -150px;
+					bottom: 0;
 					.transition(all, 0.5s, ease);
 				}
+				.visuel{
+					opacity: 1;
+					/*
+					filter: grayscale(0%);
+				    -webkit-filter: grayscale(0%);
+				    -moz-filter: grayscale(0%);
+				    -ms-filter: grayscale(0%);
+				    -o-filter: grayscale(0%);
+				    */
+				    .transition(all, 0.5s, ease);
+				    
+				}
 			}
-						
+			
+			.visuel{
+				position : absolute;
+				top : 0px;
+				z-index: 98;
+				opacity: .8;	
+				/*
+				filter: grayscale(100%);
+			    -webkit-filter: grayscale(100%);
+			    -moz-filter: grayscale(100%);
+			    -ms-filter: grayscale(100%);
+			    -o-filter: grayscale(100%);
+			    */
+/* 			    filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale"); /* Firefox 10+, Firefox on Android */
+/*     filter: gray;  */
+			
+			    .transition(all, 0.5s, ease);
+			
+				
+			}
+			
+			* html .visuel{
+			filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale"); /* Firefox 10+, Firefox on Android */
+    filter: gray; /* IE6-9 */
+			}
+			
+
+			
+
+			/*
+			
 			&:after{
 				content: "";
 				background-color: @white;
@@ -719,6 +789,7 @@ section{
 				top: 0;
 				left: 0;
 				.opacity(0.8);
+				
 				.transition(all, 0.5s, ease);
 			}			
 			&:hover:after{
@@ -726,48 +797,36 @@ section{
 				.transition(all, 0.5s, ease);
 			}
 			
-			.details{				
-				outline: none;				
-				background: rgba(0,0,0,0.80) !important;
-				padding: 10px !important;
-				position: absolute;
-				width: 100%;
-				left: 1px;
-				bottom: -225px;
-				.transition(all, 0.5s, ease);
-				
-				h2, p{
-					color: @white;
-					font-size: 0.750em;
-					.font-family("HelveticaNeue-Thin");
-				}		
-			}
+*/
+			
+			
 		}
 		
 		/* Illustrations */
 		div:nth-child(1){
 			&:after{
-				background-image: url(../images/vestiaire_vignette_1.jpg);
+/*  				background: url(../images/vestiaire_vignette_1.jpg);  */
+/* 				content: url(../images/vestiaire_vignette_1.jpg); */
 			}
 		}		
 		div:nth-child(2){
 			&:after{
-				background-image: url(../images/vestiaire_vignette_2.jpg);
+/* 				background-image: url(../images/vestiaire_vignette_2.jpg); */
 			}
 		}
 		div:nth-child(3){
 			&:after{
-				background-image: url(../images/vestiaire_vignette_3.jpg);
+/* 				background-image: url(../images/vestiaire_vignette_3.jpg); */
 			}
 		}
 		div:nth-child(4){
 			&:after{
-				background-image: url(../images/vestiaire_vignette_4.jpg);
+/* 				background-image: url(../images/vestiaire_vignette_4.jpg); */
 			}
 		}
 		div:nth-child(5){
 			&:after{
-				background-image: url(../images/vestiaire_vignette_5.jpg);
+/* 				background-image: url(../images/vestiaire_vignette_5.jpg); */
 /* 				background-position: 0px -590px;				 */
 			}
 		}		

@@ -85,11 +85,15 @@ Pour célébrer le nouveau parfum Armani Code, Obsession a conçu trois films ra
 		</div>
 		<div class="row vignettes">			
 			{foreach from=$vestiaire_content.articles key=myId item=i name=vestiaire_content}						
-				<div class="col-md-{$i.cols} col-xs-{$i.cols} vignette" data-link="{$smarty.const.BASE_URL|escape}/le-vestiaire#{$i.id}">						
+				<div class="col-md-{$i.cols} col-xs-{$i.cols} vignette" data-link="{$smarty.const.BASE_URL|escape}/le-vestiaire#{$i.id}">	
+					<img src="{$smarty.const.BASE_URL|escape}/images/{$i.visuel}" alt="{$i.article}"  class="visuel">					
 	      			<div class="details">	      		
 	      				<h2>{$i.title}</h2>
 	      				<p>{$i.article}</p>	
 	      			</div>
+	      		
+	      			
+	      		
 	      		</div>												
 			{/foreach}			
 		</div>	
