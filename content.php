@@ -45,7 +45,7 @@ $code_content = array(
 
 
 $vestiaire_content = array(
-	'titre' => 'Le Vestiaire de l\'homme Armani Code',
+	'titre' => 'Le Vestiaire',// de l\'homme Armani Code',
 	'articles' => array (
 					array(
 						'id'		=>	1,
