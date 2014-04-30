@@ -40,6 +40,26 @@
   ga('send', 'pageview');
 {/literal}
 </script>	
+
+
+{if isset($smarty.server.REDIRECT_URL) && $smarty.server.REDIRECT_URL == '/identification'}
+<!--
+Début du tag DoubleClick Floodlight : Veillez à ne pas supprimer
+Nom d'activité de ce tag : armani-code_espace-dedie_Identification-obsession
+URL de la page Web où doit être placé le tag : http://armani-code.obsession.nouvelobs.com/identification
+Ce tag doit être placé entre les tags <body> et </body>, le plus près possible du tag d'ouverture.
+Date de création : 04/30/2014
+-->
+<script type=""text/javascript"">
+var axel = Math.random() + """";
+var a = axel * 10000000000000;
+document.write('<img src=""http://ad.doubleclick.net/activity;src=4232944;type=ARMAR0;cat=arman00;ord=' + a + '?" width="1" height="1" alt=""/>');
+</script>
+<noscript>
+<img src="http://ad.doubleclick.net/activity;src=4232944;type=ARMAR0;cat=arman00;ord=1?" width="1" height="1" alt=""/>
+</noscript>
+<!-- Fin du tag DoubleClick Floodlight : Veuillez ne pas supprimer -->
+{else}
 <!--
 Début du tag DoubleClick Floodlight : Veillez à ne pas supprimer
 Nom d'activité de ce tag : armani-code_espace-dedie-obsession
@@ -56,6 +76,10 @@ document.write('<img src="http://ad.doubleclick.net/activity;src=4232944;type=AR
 <img src="http://ad.doubleclick.net/activity;src=4232944;type=ARMAR0;cat=arman0;ord=1?" width="1" height="1" alt=""/>
 </noscript>
 <!-- Fin du tag DoubleClick Floodlight : Veuillez ne pas supprimer -->
+{/if}
+
+
+
 
 
 
